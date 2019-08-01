@@ -53,10 +53,10 @@ public class PhotonDepositPresenterImpl extends BasePresenterImpl<PhotonDepositC
     }
 
     /**
-     * 创建通道
-     * @param photonTokenAddress 光子币种token地址
-     * @param partnerAddress 目标地址
-     * @param depositBalance 存款金额
+     * 通道存款   deposit channel
+     * @param photonTokenAddress 光子币种token地址      Photon currency token address
+     * @param partnerAddress 目标地址                   target address
+     * @param depositBalance 存款金额                   Deposit amount
      *                       异步调用 需要确实是否要废弃线程
      * */
     @Override
@@ -66,12 +66,13 @@ public class PhotonDepositPresenterImpl extends BasePresenterImpl<PhotonDepositC
                 try {
                     if (PhotonApplication.api != null) {
                         mView.depositChannelStart();
-                        /**
+                        /*
                          * partnerAddress 	string 	partner_address 	通道对方地址
                          * tokenAddress 	string 	token_address 	哪种token
-                         * settleTimeout 	string 	settle_timeout 	通道结算时间 存款为0
-                         * balanceStr 	big.Int 	balance 	存入金额，一定大于0
+                         * settleTimeout 	string 	settle_timeout 	通道结算时间 存款为0  主网创建为40000以上  Channel settlement time deposit is 0, the main network is created above 40,000
+                         * balanceStr 	big.Int 	balance 	存入金额，一定大于0     Deposit amount must be greater than 0
                          * newChannel 	bool 	new_channel 	判断通道是否存在，决定此次行为是创建通道并存款还是只存款  false为存钱
+                         * Determine whether the channel exists, decide whether the behavior is to create a channel and deposit or only deposit false for saving money
                          * */
                         String channelBalance = new BigDecimal(depositBalance).multiply(Convert.Unit.ETHER.getWeiFactor()).stripTrailingZeros().toPlainString();
                         String response = PhotonApplication.api.deposit(partnerAddress, photonTokenAddress, 0, channelBalance,false);
@@ -89,6 +90,9 @@ public class PhotonDepositPresenterImpl extends BasePresenterImpl<PhotonDepositC
         }
     }
 
+    /**
+     * get balance form photon
+     * */
     @Override
     public void getBalanceFromPhoton() {
         ThreadPoolUtils.getInstance().getCachedThreadPool().execute(() -> {

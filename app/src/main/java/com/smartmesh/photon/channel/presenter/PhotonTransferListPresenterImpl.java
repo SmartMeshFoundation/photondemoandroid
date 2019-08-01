@@ -28,6 +28,8 @@ public class PhotonTransferListPresenterImpl implements PhotonTransferListContra
 
     /**
      * 简单查询数据库 不会阻塞  ps:如果数据太多需要加上线程
+     * Simple query database will not block ps: if there is too much data, you need to add threads
+     * 获取发出的交易数据     Get the transaction data sent
      * */
     @Override
     public void getSentTransfers() {
@@ -51,6 +53,7 @@ public class PhotonTransferListPresenterImpl implements PhotonTransferListContra
 
     /**
      * 简单查询数据库 不会阻塞  ps:如果数据太多需要加上线程
+     * 获取收到的交易数据       Get received transaction data
      * */
     @Override
     public void getReceivedTransfers() {

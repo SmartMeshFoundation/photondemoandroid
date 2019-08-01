@@ -47,6 +47,9 @@ public class PhotonTransferPresenterImpl extends BasePresenterImpl<PhotonTransfe
         }
     }
 
+    /**
+     * transfer photon method
+     * */
     @Override
     public void photonTransferMethod(String token,String amount,String walletAddress,boolean showDialog,boolean isDirect,String filePath) {
         if (TextUtils.isEmpty(amount) || TextUtils.isEmpty(walletAddress) || TextUtils.isEmpty(token)) {
@@ -61,13 +64,13 @@ public class PhotonTransferPresenterImpl extends BasePresenterImpl<PhotonTransfe
                 if (PhotonApplication.api != null) {
                     String balance = new BigDecimal(amount).multiply(Convert.Unit.ETHER.getWeiFactor()).stripTrailingZeros().toPlainString();
                     /**
-                     * tokenAddress string– 交易token
-                     * targetAddress string – 收款方地址
-                     * amountstr string – 金额
-                     * feestr string – 手续费金额
-                     * secretStr string – 交易密码,可为""
-                     * isDirect string – 是否直接通道交易
-                     * data - 发送交易附带的消息
+                     * tokenAddress string– 交易token               Transaction token address
+                     * targetAddress string – 收款方地址            Payee address
+                     * amountstr string – 金额                      Amount
+                     * feestr string – 手续费金额                   Fee amount
+                     * secretStr string – 交易密码,可为""           Transaction password, can be ""
+                     * isDirect string – 是否直接通道交易           Whether direct channel trading
+                     * data - 发送交易附带的消息                     Send a message with the transaction
                      */
                     String jsonString = PhotonApplication.api.transfers(token,walletAddress, balance,"", isDirect,"",filePath);
                     mView.transferSuccess(jsonString,isDirect,amount);
@@ -81,10 +84,10 @@ public class PhotonTransferPresenterImpl extends BasePresenterImpl<PhotonTransfe
     }
 
     /**
-     * 获取通道费用
-     * targetStr 目标节点地址
-     * tokenStr 转账token地址
-     * amountstr l转账的金额
+     * 获取通道费用   Get channel fees
+     * targetStr 目标节点地址            Target node address
+     * tokenStr 转账token地址            Transfer token address
+     * amountstr l转账的金额             Transfer transfer amount
      * */
     @Override
     public void getFeeFindPath(String token,String amount, String walletAddress) {
@@ -113,6 +116,7 @@ public class PhotonTransferPresenterImpl extends BasePresenterImpl<PhotonTransfe
 
     /**
      * 获取光子版本号
+     * Get the photon version number
      * */
     @Override
     public void getPhotonVersionCode() {

@@ -23,6 +23,8 @@ public class PhotonContractListPresenterImpl implements PhotonContractListContra
 
     /**
      * 读取数据库数据 不会阻塞
+     * 查询合约调用数据
+     * Query contract call data
      * */
     @Override
     public void getContractCallTxQuery() {

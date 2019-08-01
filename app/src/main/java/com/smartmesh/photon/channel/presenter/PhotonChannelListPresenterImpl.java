@@ -34,6 +34,9 @@ public class PhotonChannelListPresenterImpl extends BasePresenterImpl<PhotonChan
         this.mView = view;
     }
 
+    /**
+     * set photo status
+     * */
     @Override
     public void setPhotonStatus(TextView photonStatus,Context context) {
         if (photonStatus != null){
@@ -91,43 +94,42 @@ public class PhotonChannelListPresenterImpl extends BasePresenterImpl<PhotonChan
      */
     @Override
     public void loadChannelList(boolean showToast) {
-        ThreadPoolUtils.getInstance().getCachedThreadPool().execute(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    if (PhotonApplication.api != null) {
-                        String str = PhotonApplication.api.getChannelList();
-                        if (!TextUtils.isEmpty(str)) {
-                            mView.loadChannelSuccess(str);
-                        }else{
-                            mView.loadChannelError(false);
-                        }
-                    } else {
-                        mView.loadChannelError(showToast);
+        ThreadPoolUtils.getInstance().getCachedThreadPool().execute(() -> {
+            try {
+                if (PhotonApplication.api != null) {
+                    String str = PhotonApplication.api.getChannelList();
+                    if (!TextUtils.isEmpty(str)) {
+                        mView.loadChannelSuccess(str);
+                    }else{
+                        mView.loadChannelError(false);
                     }
-                } catch (Exception e) {
+                } else {
                     mView.loadChannelError(showToast);
                 }
+            } catch (Exception e) {
+                mView.loadChannelError(showToast);
             }
         });
     }
 
+    /**
+     * withdraw
+     * @param channelIdentifierHashStr    channel identifier
+     * @param amountstr                   Withdrawal Amount
+     * */
     @Override
     public void photonWithDraw(int position,String channelIdentifierHashStr, String amountstr, String op) {
         try {
-            ThreadPoolUtils.getInstance().getCachedThreadPool().execute(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        if (PhotonApplication.api != null) {
-                            String jsonString = PhotonApplication.api.withdraw(channelIdentifierHashStr,amountstr ,op);
-                            mView.photonWithdrawSuccess(position,jsonString);
-                        } else {
-                            mView.photonError();
-                        }
-                    } catch (Exception e) {
+            ThreadPoolUtils.getInstance().getCachedThreadPool().execute(() -> {
+                try {
+                    if (PhotonApplication.api != null) {
+                        String jsonString = PhotonApplication.api.withdraw(channelIdentifierHashStr,amountstr ,op);
+                        mView.photonWithdrawSuccess(position,jsonString);
+                    } else {
                         mView.photonError();
                     }
+                } catch (Exception e) {
+                    mView.photonError();
                 }
             });
         }catch (Exception e){
@@ -136,22 +138,23 @@ public class PhotonChannelListPresenterImpl extends BasePresenterImpl<PhotonChan
         }
     }
 
+    /**
+     * settle channel
+     * @param channelIdentifierHashStr    channel identifier
+     * */
     @Override
     public void photonSettleChannel(int position, String channelIdentifierHashStr) {
         try {
-            ThreadPoolUtils.getInstance().getCachedThreadPool().execute(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        if (PhotonApplication.api != null) {
-                            String jsonString = PhotonApplication.api.settleChannel(channelIdentifierHashStr);
-                            mView.photonSettleSuccess(position,jsonString);
-                        } else {
-                            mView.photonError();
-                        }
-                    } catch (Exception e) {
+            ThreadPoolUtils.getInstance().getCachedThreadPool().execute(() -> {
+                try {
+                    if (PhotonApplication.api != null) {
+                        String jsonString = PhotonApplication.api.settleChannel(channelIdentifierHashStr);
+                        mView.photonSettleSuccess(position,jsonString);
+                    } else {
                         mView.photonError();
                     }
+                } catch (Exception e) {
+                    mView.photonError();
                 }
             });
         }catch (Exception e){
@@ -160,22 +163,24 @@ public class PhotonChannelListPresenterImpl extends BasePresenterImpl<PhotonChan
         }
     }
 
+    /**
+     * close channel
+     * @param channelIdentifierHashStr    channel identifier
+     * @param isForced                    is forced close the channel  true or false
+     * */
     @Override
     public void photonCloseChannel(int position, String channelIdentifierHashStr, boolean isForced) {
         try {
-            ThreadPoolUtils.getInstance().getCachedThreadPool().execute(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        if (PhotonApplication.api != null) {
-                            String jsonString = PhotonApplication.api.closeChannel(channelIdentifierHashStr, isForced);
-                            mView.photonCloseChannelSuccess(position,jsonString,isForced);
-                        } else {
-                            mView.photonError();
-                        }
-                    } catch (Exception e) {
+            ThreadPoolUtils.getInstance().getCachedThreadPool().execute(() -> {
+                try {
+                    if (PhotonApplication.api != null) {
+                        String jsonString = PhotonApplication.api.closeChannel(channelIdentifierHashStr, isForced);
+                        mView.photonCloseChannelSuccess(position,jsonString,isForced);
+                    } else {
                         mView.photonError();
                     }
+                } catch (Exception e) {
+                    mView.photonError();
                 }
             });
         }catch (Exception e){
@@ -186,22 +191,21 @@ public class PhotonChannelListPresenterImpl extends BasePresenterImpl<PhotonChan
 
     /**
      * 通过photon获取链上、通道内余额
+     * Get the balance on the chain and channel through photon
      * 内部实现是去公网查询
+     * Internal implementation is to go to the public network query
      * */
     @Override
     public void getBalanceFromPhoton() {
         try {
-            ThreadPoolUtils.getInstance().getCachedThreadPool().execute(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        if (PhotonApplication.api != null) {
-                            String jsonString = PhotonApplication.api.getAssetsOnToken(PhotonUrl.PHOTON_SMT_TOKEN_ADDRESS);
-                            mView.getPhotonBalanceFromApiSuccess(jsonString);
-                        }
-                    }catch (Exception e){
-                        e.printStackTrace();
+            ThreadPoolUtils.getInstance().getCachedThreadPool().execute(() -> {
+                try {
+                    if (PhotonApplication.api != null) {
+                        String jsonString = PhotonApplication.api.getAssetsOnToken(PhotonUrl.PHOTON_SMT_TOKEN_ADDRESS);
+                        mView.getPhotonBalanceFromApiSuccess(jsonString);
                     }
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
             });
         }catch (Exception e){
