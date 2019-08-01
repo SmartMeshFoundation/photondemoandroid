@@ -24,7 +24,8 @@ import mobile.NotifyHandler;
 import mobile.Strings;
 
 /**
- * photon 所有接口都是异步调用，除了获取余额
+ * Photon All api are called asynchronously, except for the balance
+ * Returning success does not mean actual success, just sending successfully
  * 返回成功并不代表实际成功，仅仅是发送成功
  * */
 public class PhotonStartUtils {
@@ -43,8 +44,9 @@ public class PhotonStartUtils {
     }
 
     /**
-     * 启动光子网络
-     * @param password 钱包密码
+     * Start photon network
+     * @param password 钱包密码  wallet password
+     * @param ethRPCEndPoint   Public chain node host, http protocol
      * */
     public void startPhotonServer(String password,String ethRPCEndPoint) {
         try {
@@ -80,24 +82,24 @@ public class PhotonStartUtils {
                     Utils.intentAction(PhotonApplication.mContext, PhotonUrl.ACTION_RAIDEN_CONNECTION_STATE, bundle);
                     PhotonApplication.photonStatus = true;
                     /**
-                     * 参数:
-                     * address string– 光子节点所使用的账户地址
-                     * keystorePath string – 账户私钥保存路径
-                     * ethRPCEndPoint string – 公链节点host,http协议
+                     * 参数: parameter
+                     * address string– 光子节点所使用的账户地址         Account address used by the photon node
+                     * keystorePath string – 账户私钥保存路径          Account private key save path
+                     * ethRPCEndPoint string – 公链节点host,http协议   Public chain node host, http protocol
                      * dataDir string – Photon db路径  测试环境和正式环境数据不一致，所以路径也不一样，
-                     * passwordfile string – 账户密码文件路径
-                     * apiAddr string – http api 监听端口
-                     * listenAddr string – udp 监听端口
-                     * ogFile string – 日志文件路径
-                     * registryAddress string – TokenNetworkRegistry合约地址
-                     * otherArgs mobile.Strings – 其他参数,参考photon -h
+                     * passwordfile string – 账户密码文件路径            Account password file path
+                     * apiAddr string – http api 监听端口               Http api listening port
+                     * listenAddr string – udp 监听端口                 Udp listening port
+                     * ogFile string – 日志文件路径                     Log file path
+                     * registryAddress string – TokenNetworkRegistry合约地址         Contract address
+                     * otherArgs mobile.Strings – 其他参数,参考photon -h              Other parameters
                      * */
                     Strings otherArg= Mobile.newStrings(1);
                     String arg = "--xmpp";
 //                    String arg = "--xmpp" : "--matrix";
                     otherArg.set(0,arg);
                     String dataDir = PhotonApplication.mContext.getFilesDir().getAbsolutePath() + SDCardCtrl.PHOTON_DATA;
-                    PhotonApplication.api = Mobile.startUp(
+                    PhotonApplication.api = Mobile.startUp(//start up photon
                             tempAddress,
                             PhotonApplication.mContext.getFilesDir().getAbsolutePath() + SDCardCtrl.WALLET_PATH,
                             TextUtils.isEmpty(ethRPCEndPoint) ? PhotonUrl.PHOTON_URL_WS : ethRPCEndPoint,
