@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/app_title_rela"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/app_back"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:paddingRight="9dp"
+        android:paddingLeft="10dp"
+        android:scaleType="center"
+        android:src="@mipmap/icon_white_back" />
+
+
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="70dp"
+        android:ellipsize="marquee"
+        android:textSize="@dimen/dimens_18_sp"
+        android:gravity="center|center_vertical"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/app_title_bottom_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimens_22_sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/app_title_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="20.5sp" />
+
+    <ImageView
+        android:id="@+id/app_right"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="center"
+        android:visibility="gone"
+        android:src="@mipmap/icon_white_menu" />
+
+    <TextView
+        android:id="@+id/app_btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textColor="@color/color_45ffbf"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp"
+        android:textSize="15sp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

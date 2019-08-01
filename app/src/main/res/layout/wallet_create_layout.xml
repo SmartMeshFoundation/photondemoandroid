@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/app_title_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/LinearSingleStyle">
+
+
+                <EditText
+                    android:id="@+id/wallet_create_name"
+                    style="@style/EditTextSingleStyle"
+                    android:hint="@string/wallet_name_hint" />
+
+                <ImageView
+                    android:id="@+id/clearWalletName"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:gravity="center_vertical"
+                    android:src="@mipmap/icon_close" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/color_2fbaffec"/>
+
+            <include layout="@layout/wallet_include_pwd"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/create_wallet"
+        style="@style/WalletStyle"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="@string/wallet_create"
+        android:textColor="@color/color_ff1b272b"
+        android:background="@drawable/selector_solid_45ffbf" />
+
+</LinearLayout>

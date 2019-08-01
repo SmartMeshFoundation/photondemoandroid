@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:paddingBottom="5dp"
+	android:paddingLeft="5dp"
+	android:paddingRight="5dp">
+	
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/photon_token_symbol"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:layout_margin="10dp"
+			android:textSize="@dimen/dimens_14_sp"
+			android:textColor="@color/color_e2edea"
+			android:gravity="center_vertical"/>
+
+		<LinearLayout
+			android:id="@+id/channelNoteBody"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="10dp"
+			android:orientation="horizontal"
+			android:visibility="visible">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginRight="10dp"
+				android:gravity="center_vertical"
+				android:textSize="@dimen/dimens_13_sp"
+				android:textColor="@color/color_7fbaffec"
+				android:text="@string/photon_channel_note_1"/>
+
+			<TextView
+				android:id="@+id/channelNote"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:gravity="center_vertical"
+				android:singleLine="true"
+				android:textSize="@dimen/dimens_13_sp"
+				android:textColor="@color/color_7fe2edea"/>
+
+		</LinearLayout>
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="10dp"
+			android:visibility="gone"
+			android:orientation="horizontal">
+			
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginRight="10dp"
+				android:gravity="center_vertical"
+				android:textSize="@dimen/dimens_13_sp"
+				android:text="@string/photon_channel_list_deposit"/>
+			
+			<TextView
+				android:id="@+id/deposit"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:gravity="center_vertical"
+				android:singleLine="true"
+				android:textSize="@dimen/dimens_13_sp"
+				android:textColor="@color/color_7fe2edea"/>
+		
+		</LinearLayout>
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="10dp"
+			android:orientation="horizontal">
+			
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginRight="10dp"
+				android:gravity="center_vertical"
+				android:textColor="@color/color_7fbaffec"
+				android:textSize="@dimen/dimens_13_sp"
+				android:text="@string/photon_balance_1"/>
+			
+			<TextView
+				android:id="@+id/balance"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:gravity="center_vertical"
+				android:singleLine="true"
+				android:textSize="@dimen/dimens_13_sp"
+				android:textColor="@color/color_7fe2edea"/>
+
+			<ImageView
+				android:id="@+id/photon_channel_pms"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:gravity="center_vertical"
+				android:layout_marginLeft="5dp"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:visibility="gone"
+				android:src="@mipmap/icon_close"/>
+
+			<View
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				android:layout_weight="1"/>
+
+			<TextView
+				android:id="@+id/lockedAmount"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:gravity="center_vertical"
+				android:layout_marginLeft="10dp"
+				android:singleLine="true"
+				android:visibility="gone"
+				android:drawablePadding="5dp"
+				android:drawableLeft="@mipmap/photon_locked_amount"
+				android:textColor="@color/color_7fe2edea"/>
+
+			<TextView
+				android:id="@+id/partnerLockedAmount"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:gravity="center_vertical"
+				android:layout_marginLeft="10dp"
+				android:singleLine="true"
+				android:visibility="gone"
+				android:drawablePadding="5dp"
+				android:drawableLeft="@mipmap/photon_partner_locked_amount"
+				android:textColor="@color/color_7fe2edea"/>
+		
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="10dp"
+			android:orientation="horizontal">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginRight="10dp"
+				android:gravity="center_vertical"
+				android:textSize="@dimen/dimens_13_sp"
+				android:textColor="@color/color_7fbaffec"
+				android:text="@string/photon_partner"/>
+
+			<TextView
+				android:id="@+id/partner"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:ellipsize="middle"
+				android:gravity="center_vertical"
+				android:singleLine="true"
+				android:textSize="@dimen/dimens_13_sp"
+				android:textColor="@color/color_7fe2edea"/>
+
+			<ImageView
+				android:id="@+id/photon_list_hidden"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:visibility="gone"
+				android:layout_gravity="center_vertical"
+				android:src="@drawable/custom_arrow"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/photon_hidden_bottom"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/stateContent"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="10dp"
+				android:layout_gravity="center_vertical"
+				android:visibility="gone"
+				android:textSize="@dimen/dimens_12_sp"
+				android:textColor="@color/color_ddc890"/>
+
+			<TextView
+				android:id="@+id/state"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="12dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:singleLine="true"
+				android:background="@color/color_ff1b272b"
+				android:visibility="gone"
+				android:textSize="@dimen/dimens_14_sp"
+				android:textColor="@color/color_ddc890"/>
+
+			<LinearLayout
+				android:id="@+id/channelBody"
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:background="@color/color_ff1b272b"
+				android:orientation="horizontal">
+
+
+				<TextView
+					android:id="@+id/photonAdd"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="@string/photon_channel_list_deposit"
+					android:textColor="@color/color_ddc890"
+					android:textSize="@dimen/dimens_14_sp"/>
+
+				<View
+					android:layout_width="0.5dp"
+					android:layout_height="match_parent"
+					android:background="@color/colorPrimary"/>
+
+				<TextView
+					android:id="@+id/photonWithdraw"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="@string/photon_withdraw"
+					android:textColor="@color/color_ddc890"
+					android:textSize="@dimen/dimens_14_sp"/>
+
+				<View
+					android:layout_width="0.5dp"
+					android:layout_height="match_parent"
+					android:background="@color/colorPrimary"/>
+
+				<TextView
+					android:id="@+id/photonClose"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="@string/photon_close"
+					android:textColor="@color/color_ddc890"
+					android:textSize="@dimen/dimens_14_sp"/>
+			</LinearLayout>
+		</LinearLayout>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="0.5dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="10dp"
+			android:background="@color/color_2fbaffec"/>
+	</LinearLayout>
+
+</LinearLayout>

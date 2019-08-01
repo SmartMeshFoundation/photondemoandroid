@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/app_title_layout"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        android:background="@color/color_ff1b272b">
+
+        <TextView
+            android:id="@+id/wallet_address"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:textColor="@color/color_7fbaffec"/>
+
+
+        <FrameLayout
+            android:layout_width="183dp"
+            android:layout_height="183dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <View
+                android:layout_width="183dp"
+                android:layout_height="183dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/color_ffffffff"/>
+
+            <ImageView
+                android:id="@+id/wallet_quick_mark"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:scaleType="fitXY" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/wallet_copy_address"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/selector_2f8e8e93_10"
+            android:text="@string/copy_address"/>
+
+        <TextView
+            android:id="@+id/qr_save_picture"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/color_45ffbf"
+            android:background="@drawable/selector_2f8e8e93_10"
+            android:text="@string/photo_save"/>
+    </LinearLayout>
+</LinearLayout>

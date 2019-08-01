@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ff1b272b"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="@string/account_pwd_login_input"
+        android:textSize="@dimen/dimens_16_sp" />
+
+    <EditText
+        android:id="@+id/dialogPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/color_7f45ffbf"
+        android:textColorHint="@color/color_7f45ffbf"
+        android:hint="@string/account_pwd"
+        android:inputType="textPassword"
+        android:background="@null"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/color_2fbaffec"/>
+
+    <TextView
+        android:id="@+id/dialogPwdInfo"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/hint_pwd_warning"
+        android:textColor="@color/color_7fbaffec"
+        android:textSize="12sp" />
+
+    <include layout="@layout/dialog_include_layout"/>
+
+</LinearLayout>

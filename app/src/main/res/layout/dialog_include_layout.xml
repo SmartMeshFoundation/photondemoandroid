@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/choiceBody"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:layout_marginTop="20dp"
+    android:layout_gravity="center_vertical"
+    android:padding="5dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:textSize="16sp"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/selector_round_7f45ffbf_2"
+        android:textColor="@color/color_ff1b272b" />
+
+    <Button
+        android:id="@+id/okBtn"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/selector_round_45ffbf_2"
+        android:textColor="@color/color_ff1b272b" />
+</LinearLayout>
+

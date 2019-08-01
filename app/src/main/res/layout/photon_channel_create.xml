@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical">
+	
+	<include layout="@layout/app_title_layout"/>
+
+	<com.smartmesh.photon.spinner.CustomSpinner
+		android:id="@+id/custom_spinner"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="16dp" />
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:gravity="center_vertical"
+		android:orientation="vertical"
+		android:paddingLeft="15dp"
+		android:paddingRight="15dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:orientation="horizontal">
+
+			<EditText
+				android:id="@+id/partner"
+				android:layout_width="0dp"
+				android:layout_height="50dp"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1"
+				android:background="@null"
+				android:ellipsize="middle"
+				android:gravity="center_vertical|left"
+				android:hint="@string/set_amount_address"
+				android:singleLine="true"
+				android:textColor="@color/color_7fe2edea"
+				android:textSize="14sp"/>
+
+			<ImageView
+				android:id="@+id/wallet_create_scan"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp"
+				android:layout_marginLeft="10dp"
+				android:scaleType="center"
+				android:src="@mipmap/icon_scan" />
+		</LinearLayout>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="0.5dp"
+			android:background="@color/color_2fbaffec"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:orientation="horizontal">
+			
+			<EditText
+				android:id="@+id/deposit"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center_vertical"
+				android:layout_marginRight="10dp"
+				android:layout_weight="1"
+				android:background="@null"
+				android:gravity="center_vertical|left"
+				android:hint="@string/set_amount"
+				android:inputType="numberDecimal"
+				android:maxLength="20"
+				android:singleLine="true"
+				android:textColor="@color/color_7fe2edea"
+				android:textSize="14sp"/>
+			
+			<TextView
+				android:id="@+id/photon_token_type"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center_vertical"
+				android:gravity="center_vertical"
+				android:singleLine="true"
+				android:textSize="14sp"/>
+		
+		</LinearLayout>
+		
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="0.5dp"
+			android:background="@color/color_2fbaffec"/>
+
+		<EditText
+			android:id="@+id/photon_channel_note"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:layout_gravity="center_vertical"
+			android:layout_marginRight="10dp"
+			android:layout_weight="1"
+			android:background="@null"
+			android:gravity="center_vertical|left"
+			android:hint="@string/photon_channel_note_hint"
+			android:maxLength="20"
+			android:singleLine="true"
+			android:textColor="@color/color_7fe2edea"
+			android:textSize="14sp"/>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="0.5dp"
+			android:background="@color/color_2fbaffec"/>
+
+	</LinearLayout>
+
+
+	<View
+		android:id="@+id/close_key_word"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"/>
+	
+	<TextView
+		android:id="@+id/photon_channel_enter"
+		style="@style/WalletStyle"
+		android:layout_marginBottom="60dp"
+		android:textColor="@color/color_ff1b272b"
+		android:background="@drawable/selector_solid_45ffbf"
+		android:text="@string/photon_channel_create_enter"
+		android:enabled="false" />
+
+</LinearLayout>

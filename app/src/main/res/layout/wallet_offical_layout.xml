@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textSize="14sp"
+                android:textColor="@color/color_7fe2edea"
+                android:text="@string/wallet_official_info"/>
+
+            <EditText
+                android:id="@+id/wallet_keystore_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_solid_1b72b"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="@string/wallet_keysotre_info"
+                android:textSize="14sp"
+                android:gravity="top|left"
+                android:padding="8dp"
+                android:minLines="8"
+                android:maxLines="8"/>
+
+            <EditText
+                android:id="@+id/wallet_keystore_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:inputType="textPassword"
+                android:background="@null"
+                android:hint="@string/wallet_keysotre_pwd" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/color_2fbaffec"/>
+
+            <TextView
+                android:id="@+id/wallet_start_import"
+                style="@style/WalletStyle"
+                android:text="@string/wallet_import_start"
+                android:textColor="@color/color_ff1b272b"
+                android:background="@drawable/selector_solid_45ffbf"
+                />
+       </LinearLayout>
+  </ScrollView>
+</LinearLayout>

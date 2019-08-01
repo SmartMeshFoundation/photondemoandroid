@@ -1,0 +1,33 @@
+photon相关
+Photon is an off-chain scaling solution, enabling instant, low-fee and scalable payments.
+It’s complementary to the Ethereum blockchain and Spectrum blockchain and works with ERC20 compatible token and ERC223 compatible token.
+Photon currently can works on Windows, Linux ,Android, iOS etc.
+Photon adds some new functions in version 1.0, such as , cooperative settlement,withdraw without closing the channel,channel charging and more perfect third-party services( Photon Monitoring and Photon-Path-Finder).
+In order to improve the user experience and to better fit for the mobile network, Photon adopts the Matrix communication mechanism and supports the crash recovery and channel charging function.
+Photon是一种链下扩展解决方案，可实现即时，低费用和可扩展的支付。
+它是以太坊区块链和光谱区块链的补充，可与ERC20兼容Token和ERC223兼容Token配合使用。
+Photon目前可以在Windows，Linux，Android，iOS等上运行.
+Photon在1.0版本中添加了一些新功能，例如，合作解决，withdraw而不关闭频道，频道收费和更完美的第三方服务（Photon Monitoring and Photon-Path-Finder）。
+为了改善用户体验并更好地适应移动网络，Photon采用Matrix通信机制，支持崩溃恢复和通道充电功能。
+
+photon github 地址
+https://github.com/SmartMeshFoundation/Photon
+
+photon wiki  api调用都在这里
+https://github.com/SmartMeshFoundation/Photon/wiki/%E6%89%8B%E6%9C%BA%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3
+
+photon faq
+http://photon.smartmesh.cn/photon_cn_faq.html
+http://photon.smartmesh.cn/photon_en_faq.html
+
+需要特别注意的是photon startUp之后 必须stop后才能再次调用startUp 否则crash
+
+主网合约地址：0x242e0de2B118279D1479545A131a90A8f67A2512
+测试网络合约地址：0xc479184abeb8c508ee96e4c093ee47af2256cbbf
+
+主网SMT Token地址：0x6601F810eaF2fa749EEa10533Fd4CC23B8C791dc
+测试网络SMT Token地址：0xF6e8A227cbD5257d2f8a764F5788ce56E3554cB5
+
+photon api都是异步调用， api接口成功并不代表实际操作成功， 具体需要看消息通知
+
+

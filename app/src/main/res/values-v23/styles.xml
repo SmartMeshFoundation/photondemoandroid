@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/color_e2edea</item>
+        <item name="android:textColorPrimary">@color/color_e2edea</item>
+        <item name="android:textColor">@color/color_e2edea</item>
+        <item name="android:textColorHint">@color/color_7fe2edea</item>
+        <item name="android:textColorHighlight">@color/color_7fe2edea</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+     <!--   <item name="android:windowLightStatusBar">true</item>-->
+    </style>
+
+
+    <!-- android:Theme.Light Theme.AppCompat.Light -->
+    <style name="AppBaseThemeOpaque" parent="AppTheme">
+        <!--<item name="android:windowIsTranslucent">false</item>-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- android:Theme.Light Theme.AppCompat.Light -->
+    <style name="AppBaseTheme" parent="AppTheme">
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+</resources>

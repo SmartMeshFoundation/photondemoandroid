@@ -1,0 +1,295 @@
+<resources>
+
+    <string name="app_name">Photon</string>
+    <string name="smt">SMT</string>
+    <string name="all">All</string>
+
+    <string name="token_trans"> %1$s %2$s </string>
+    <string name="on_line">On line</string>
+    <string name="off_line">Off line</string>
+
+    <!-- The wallet -->
+    <string name="wallet_create">Create new account</string>
+    <string name="wallet_import">Import an account</string>
+    <string name="wallet_delete">Delete account</string>
+    <string name="wallet_change">Change account</string>
+    <string name="wallet_official">Official wallet</string>
+    <string name="wallet_private_key">Private key</string>
+    <string name="wallet_name_hint">Account Name</string>
+    <string name="wallet_balance_hint">Balance</string>
+    <string name="wallet_create_new">Create</string>
+    <string name="wallet_import_new">Import</string>
+    <string name="wallet_create_ing">Creating...</string>
+    <string name="wallet_import_ing">Importing...</string>
+    <string name="wallet_setting_name">Please set the account name</string>
+    <string name="wallet_name_warning">Please set account names with 1–12 digits</string>
+    <string name="wallet_pwd_warning">Please set passwords with 6–16 digits</string>
+    <string name="wallet_empty">No wallet</string>
+    <string name="wallet_scan_cant_photon">Observation mode cannot be startup photon</string>
+    <string name="wallet_scan_cant_click">Observing mode cannot do this</string>
+    <string name="wallet_copy">Please back up your wallet</string>
+    <string name="account_pwd">Account password</string>
+    <string name="hint_pwd_warning">To ensure safety of your balance, please do not disclose your privacy to others. </string>
+    <string name="wallet_create_failure">Failed to create account!</string>
+    <string name="wallet_pwd_error">Wrong password</string>
+    <string name="wallet_token_number">Number</string>
+    <string name="wallet_backup">Manager</string>
+
+    <string name="wallet_private_key_hint">Please enter private key</string>
+    <string name="wallet_import_start">Start importing</string>
+    <string name="wallet_official_info">Copy and paste Ether keystore.</string>
+    <string name="wallet_keysotre_info">Keystore text content</string>
+    <string name="wallet_keysotre_pwd">KeyStore&quot;&quot; password</string>
+
+    <string name="wallet_keystore_empty">Keystore cannot be blank</string>
+    <string name="wallet_private_key_empty">Private key cannot be empty</string>
+    <string name="wallet_private_key_error">Invalid private key</string>
+    <string name="wallet_pwd_empty">Password cannot be blank</string>
+    <string name="wallet_private_key_error_1">Private key import failed, unrecognized character: %s</string>
+    <string name="wallet_copy_keystore_2">Copy keystore</string>
+    <string name="wallet_private_key_check_out">Private key can only be exported once, please keep it safe</string>
+    <string name="wallet_copy_private_key_2">Copy private key</string>
+    <string name="wallet_show_private_key_3">Private key copied</string>
+    <string name="wallet_show_keystore_2">Display keyStore</string>
+    <string name="wallet_show_keystore">Current account KeyStore</string>
+    <string name="wallet_show_private_key">Current account private key</string>
+
+    <string name="wallet_copy_private_key">Export private key</string>
+    <string name="wallet_copy_keysotre">Export keystore</string>
+    <string name="wallet_copy_pwd_info">Hint: %s</string>
+    <string name="wallet_scan_del">Deleting accounts cannot be reversed. Are you sure?</string>
+
+    <string name="error_address">Wrong address</string>
+    <string name="account">Account</string>
+    <string name="account_pwd_input">Set password</string>
+    <string name="account_pwd_login_input">Enter password</string>
+    <string name="account_pwd_again_input">Confirm password</string>
+    <string name="account_pwd_info_input">Password hint</string>
+    <string name="account_pwd_again_warning">Password does not match</string>
+    <string name="account_name_exist">Username already exists</string>
+
+    <string name="notification_wallgen_finished">Account created!</string>
+    <string name="photon_open_channel_error">Open channel fail</string>
+    <string name="photon_channel_create_enter_ing">Creating...</string>
+    <string name="photon_open_channel_success">Channel is being created</string>
+
+    <string name="spectrum">Spectrum</string>
+
+    <string name="photon">Photon</string>
+    <string name="photon_to">To</string>
+    <string name="photon_in_balance">Balance in photon %s</string>
+    <string name="photon_create_balance">Balance %s</string>
+    <string name="photon_get_channel">Info</string>
+    <string name="photon_channel">Channel</string>
+    <string name="photon_channel_note">Note:</string>
+    <string name="photon_channel_note_1">Note</string>
+    <string name="photon_channel_note_hint">Input channel note</string>
+    <string name="photon_trans_ing">Transfer...</string>
+    <string name="photon_forced_close">Forced close</string>
+    <string name="photon_channel_settle">Settle channel</string>
+    <string name="photon_start_up">Restart photon</string>
+    <string name="photon_stop">Do you exit the photon?</string>
+    <string name="photon_restart">Photon does not start, please restart photon</string>
+    <string name="photon_locked_amount">Locked amount</string>
+    <string name="photon_transfer_list_empty">Transfer list is empty</string>
+    <string name="photon_transfer_title">Photon Transactions</string>
+    <string name="photon_amount">Amount</string>
+    <string name="photon_amount_send">- %1$s%2$s</string>
+    <string name="photon_amount_received">+ %1$s%2$s</string>
+    <string name="photon_transfer_no_route">No available route</string>
+    <string name="photon_transfer_time">Time</string>
+    <string name="photon_transfer_success">Transfer Success</string>
+    <string name="photon_transfer_error">Transfer failed</string>
+    <string name="photon_transfer_cancel">Transfer cancel</string>
+    <string name="photon_transfer_ing">Transferring</string>
+    <string name="photon_tx_withdraw_1">Withdraw success</string>
+    <string name="photon_tx_withdraw_2">Withdraw failed</string>
+    <string name="photon_tx_withdraw_3">Withdrawing</string>
+    <string name="photon_tx_deposit_1">Deposit success</string>
+    <string name="photon_tx_deposit_2">Deposit failed</string>
+    <string name="photon_tx_deposit_3">Depositing</string>
+    <string name="photon_tx_create_1">Create success</string>
+    <string name="photon_tx_create_2">Create failed</string>
+    <string name="photon_tx_create_3">Creating</string>
+    <string name="photon_tx_close_1">Close success</string>
+    <string name="photon_tx_close_2">Close failed</string>
+    <string name="photon_tx_close_3">Closing</string>
+    <string name="photon_tx_forced_close_1">Forced Close success</string>
+    <string name="photon_tx_forced_close_2">Forced Close failed</string>
+    <string name="photon_tx_forced_close_3">Forced shutdown</string>
+    <string name="photon_tx_settle_1">Settle success</string>
+    <string name="photon_tx_settle_2">Settle failed</string>
+    <string name="photon_tx_settle_3">In settlement</string>
+    <string name="photon_partner">Partner</string>
+    <string name="photon_start_up_ing">Photon is starting, please wait</string>
+    <string name="photon_channel_close_hint">Close the channel?</string>
+    <string name="photon_channel_forced_close_hint">Forced close the channel?</string>
+    <string name="photon_channel_forced_close_hint_1">Cannot shut down properly, is it forced to close the channel?</string>
+    <string name="photon_channel_forced_close_hint_2">Cannot withdraw cash normally, whether to close the channel for cash withdrawal?</string>
+    <string name="photon_channel_forced_settle_hint">Settle the channel?</string>
+    <string name="photon_channel_close_content">*Closing channel consumes Gas：approximately 0.002 SMT,Because it is on chain transaction, it takes a certain amount of time.</string>
+    <string name="photon_channel_forced_close_content">* Forced to close the channel requires approximately Gas: 0.002SMT, which takes approximately one week to settle.</string>
+    <string name="photon_channel_settle_content">*Settle channel consumes Gas：approximately 0.002 SMT,Because it is on chain transaction, it takes a certain amount of time.</string>
+    <string name="photon_channel_withdraw_hint">Sure to withdraw？</string>
+    <string name="photon_channel_withdraw_zero">No balance in the channel</string>
+    <string name="photon_channel_withdraw_content">Will withdraw the entire balance %1$s%2$s,Because it is on chain transaction, it takes a certain amount of time, please wait.</string>
+    <string name="photon_channel_content">Channel is closed,Because it is on chain transaction, it takes a certain amount of time, please wait.</string>
+    <string name="photon_channel_content_1">Forcibly close the channel, please wait for the block to be synchronized to the target block for settlement.</string>
+    <string name="photon_channel_content_2">After the settlement, the channel will be closed and the amount will be returned to the account address.</string>
+    <string name="photon_channel_content_3">It takes a while to close the channel. If the time is too long, you can forcefully close the channel.</string>
+    <string name="photon_channel_content_4">It takes a while to withdraw cash. If the time is too long, you can force the channel to be closed for withdrawal.</string>
+    <string name="photon_channel_content_5">The other party is withdrawing, it will take a while, If the time is too long, you can forcefully close the channel.</string>
+    <string name="photon_channel_content_6">The other party is closing the channel. If the time is too long, you can force the channel to be closed.</string>
+    <string name="photon_channel_list_type_1">In the supplementary balance, it is estimated that 1~2 minutes.</string>
+    <string name="photon_channel_list_type_3">Whether to force shutdown?</string>
+    <string name="photon_channel_list_type_4">Whether to force withdraw?</string>
+    <string name="photon_channel_list_type_5">Settlement is blocks,please wait...%1$d(Current block)/%2$d(Settle block)</string>
+    <string name="photon_channel_list_type_6">Settle now</string>
+    <string name="photon_channel_list_type_7">In settlement,Because it is on chain transaction, it takes a certain amount of time, please wait.</string>
+    <string name="photon_channel_list_type_8">Channel closed successfully</string>
+    <string name="photon_channel_create_enter">Enter Channel</string>
+    <string name="photon_channel_add_complete">Add to Complete</string>
+    <string name="photon_channel_list_deposit">Deposit</string>
+    <string name="photon_channel_create_enter_add_error">Add error</string>
+    <string name="photon_channel_create_enter_add">Adding...</string>
+    <string name="photon_channel_no">No channel, please create first</string>
+    <string name="photon_list_empty">Channel list is empty</string>
+
+    <string name="photon_withdraw">Withdraw</string>
+    <string name="photon_close">Close</string>
+    <string name="photon_state">State</string>
+    <string name="photon_date">Date</string>
+
+    <string name="photon_balance_1">Balance</string>
+    <string name="photon_pay_1">Pay</string>
+
+    <string name="photon_channel_transfer_type_1">* This transfer requires a fee of %1$s%2$s, and whether to continue the transfer.</string>
+    <string name="photon_channel_transfer_type_2">Continue</string>
+
+    <string name="photon_channel_create_2">Create channel</string>
+
+    <string name="photon_channel_balance">Chain Balance : %1$s%2$s</string>
+    <string name="photon_channel_address">Address %s</string>
+    <string name="photon_channel_note_2">Note %s</string>
+    <string name="photon_channel_error_balance">The input amount cannot be 0</string>
+
+    <string name="photon_channel_balance_on_chain">Balance on chain</string>
+    <string name="photon_channel_balance_in_photon">Balance in photon</string>
+
+    <string name="photon_channel_mesh_pay_1">This feature is required for both parties to use Internetless payments.</string>
+    <string name="photon_channel_mesh_pay_2">Turn off offline payments and only use online transfer.</string>
+    <string name="photon_channel_mesh_pay_3">
+        Unable to make networkless payment,
+        please ensure that the other party has turned on the networkless payment switch and is on the same peer-to-peer network.
+        You can turn off the networkless payment and try to have online payment.
+    </string>
+    <string name="photon_channel_mesh_pay_4">This operation is not possible, please check the network status.</string>
+
+    <string name="photon_transfer">Photon transfer</string>
+    <string name="photon_notify">Notify</string>
+    <string name="photon_start">Photon startup</string>
+    <string name="photon_sync_block">Block synchronization</string>
+    <string name="photon_certification">Authentication</string>
+    <string name="photon_develop_title">Photon info</string>
+    <string name="photon_develop_1">You have developer mode turned on</string>
+    <string name="photon_develop_2">You also need to run %d to start developer mode.</string>
+    <string name="photon_develop_3">You have turned off developer mode</string>
+    <string name="photon_develop_4">You also need to perform %d steps to turn off developer mode.</string>
+    <string name="photon_develop_5">Copy info</string>
+    <string name="photon_develop_6">Generate image</string>
+
+    <string name="photon_faq">Photon FAQ</string>
+    <string name="photon_version">v%s</string>
+
+    <string name="photon_pms_1">Your transaction data is waiting for synchronization on the chain</string>
+    <string name="photon_pms_2">Your transaction data sync failed, please reconnect to the network</string>
+
+    <string name="photon_upload_log_title">Upload photon log</string>
+    <string name="photon_upload_log_success">Upload photon log successfully</string>
+    <string name="photon_upload_log_error">Upload log failed</string>
+    <string name="photon_upload_log_error_content">Please go to the %s path to upload the backup log to the customer service to better solve the problem.</string>
+    <string name="photon_upload_log_ing">Start upload</string>
+    <string name="photon_upload_log_content">When running a photon error, submit a local photon running log to better troubleshoot problems encountered during photon operation.</string>
+
+    <string name="photon_error_1002">Insufficient channel balance</string>
+    <string name="photon_error_1014">Currently no network, does not allow to launch MediatedTransfer</string>
+    <string name="photon_error_1015">Duplicate transaction with the same password</string>
+    <string name="photon_error_1016">The other party is not online</string>
+    <string name="photon_error_1020">Transaction timeout</string>
+    <string name="photon_error_1022">Photon node is not enabled pfs or pfs module is not available</string>
+    <string name="photon_error_1023">No network time is too long, no transaction is allowed</string>
+    <string name="photon_error_2000">Insufficient balance to pay for gas</string>
+    <string name="photon_error_2012">The status of the public link node is abnormal.</string>
+    <string name="photon_error_2999">The public chain node rpc call failed</string>
+    <string name="photon_error_3005">Channel already exist</string>
+    <string name="photon_error_4000">Query route failed</string>
+    <string name="photon_error_5001">The channel status is not open or there is an outstanding deposit operation in the channel.</string>
+    <string name="photon_error_5018">The cash withdrawal amount is greater than the available amount</string>
+    <string name="photon_error_5025">There are still locks in the channel</string>
+    <string name="photon_error_5027">Open channel with self</string>
+    <string name="photon_error_info">* Failure info: %s, it is recommended to try again later.</string>
+    <string name="photon_error_start">Failed to start, please try again</string>
+    <string name="photon_error_first_start">first start without network</string>
+    <string name="photon_channel_no_use">No channel available, please create first</string>
+    <string name="ecology_photon_content">The photon network is a Layer 2 network architecture and is mainly used for payment and exchange requirements under the chain.</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="copy_address">Copy address</string>
+    <string name="copy_end">Copied to clipboard</string>
+    <string name="photo_save">Save Picture</string>
+    <string name="qr_code">QR code</string>
+    <string name="input_value">Enter the amount</string>
+    <string name="input_address">Enter the address</string>
+
+    <string name="error_get_photon_list">Failed to get channel list</string>
+    <string name="error_get_photon_list_1">In the data, please wait</string>
+
+    <string name="open_permission">Allow permission access in Settings->Apps->SmartMesh to use APP</string>
+    <string name="open_permission_install_package">Please open unknown app install permissions</string>
+    <string name="open_permission_about_smartmesh">Please open SmartMesh related permissions</string>
+
+    <string name="set_amount">Input amount</string>
+    <string name="set_amount_address">Input address</string>
+
+    <string name="balance_not_enough_smt">SMT Insufficient balance</string>
+    <string name="balance_not_enough">Insufficient balance</string>
+    <string name="balance_not_enough_token">%s Insufficient balance</string>
+
+    <string name="token">Token</string>
+    <string name="error">Execution failed!</string>
+
+    <string name="ok">OK</string>
+    <string name="dialog_prompt">Prompt</string>
+    <string name="dialog_create_content">Creating a channel requires block confirmation, please be patient,
+        \nit is expected that 1~2 minutes will appear in the list.</string>
+    <string name="dialog_deposit_content">The supplementary balance needs to be confirmed by the block.
+        \nIt is expected to be completed in 1~2 minutes. Please be patient.</string>
+    <string name="dialog_deposit_empty">There are no channels available, whether to create them.</string>
+    <string name="dialog_deposit_balance_empty">The available balance of the channel is insufficient and is not replenished.</string>
+
+    <string name="album">Album</string>
+    <string name="qm_qm">Scan QR Code</string>
+    <!-- qr code-->
+    <string name="quickmark_error">Create QR Code Failed</string>
+    <string name="quickmark_parse_error">Parsing the QR code failed</string>
+    <string name="quickmark_parse_error_2">QR code does not match the format</string>
+    <string name="quickmark_scan">Scan QR Code</string>
+    <string name="quickmark_scan_longclick">Press Scan QR Code in Image</string>
+    <string name="quick_mark_turn_on">Turn on the flashlight</string>
+    <string name="quick_mark_turn_off">Turn off the flashlight</string>
+
+    <!-- normal -->
+    <string name="normal_mobile_models">Mobile phone model = </string>
+    <string name="normal_system_version">System version = </string>
+    <string name="normal_app_version">Application version = </string>
+    <string name="normal_app_channel">Application channel = </string>
+    <string name="normal_crash_time">Crash time = </string>
+
+    <string name="notification_wallimp_finished">Import account success!</string>
+    <string name="notification_wallimp_failure">Import account failed</string>
+    <string name="notification_wallimp_repeat">This account already exists</string>
+    <string name="notification_wallimp_repeat_username">This username already exists!</string>
+    <string name="notification_wallimp_name_empty">Wallet name cannot be empty</string>
+    <string name="notification_wallgen_no_memory">Out of memory!</string>
+</resources>

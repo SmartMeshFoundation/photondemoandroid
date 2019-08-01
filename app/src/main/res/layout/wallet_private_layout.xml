@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/wallet_private_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_solid_1b72b"
+                android:layout_margin="15dp"
+                android:hint="@string/wallet_private_key_hint"
+                android:textSize="14sp"
+                android:gravity="top|left"
+                android:padding="8dp"
+                android:minLines="6"
+                android:maxLines="6"/>
+
+            <include layout="@layout/wallet_include_pwd"/>
+
+            <TextView
+                android:id="@+id/wallet_start_import"
+                style="@style/WalletStyle"
+                android:layout_marginTop="40dp"
+                android:text="@string/wallet_import_start"
+                android:textColor="@color/color_ff1b272b"
+                android:background="@drawable/selector_solid_45ffbf"/>
+
+         </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:id="@+id/app_title_rela"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<ImageView
+				android:id="@+id/app_back"
+				android:layout_width="wrap_content"
+				android:layout_height="48dp"
+				android:paddingRight="9dp"
+				android:paddingLeft="15dp"
+				android:scaleType="center"
+				android:src="@mipmap/icon_white_back" />
+
+			<ImageView
+				android:id="@+id/app_upload_photon_log"
+				android:layout_width="wrap_content"
+				android:layout_height="48dp"
+				android:layout_alignParentRight="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginRight="120dp"
+				android:src="@mipmap/photon_upload_log_icon"
+				android:scaleType="center"/>
+
+			<ImageView
+				android:id="@+id/photon_wallet_address"
+				android:layout_width="wrap_content"
+				android:layout_height="48dp"
+				android:layout_alignParentRight="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginRight="85dp"
+				android:src="@mipmap/photon_qr_icon"
+				android:scaleType="center"/>
+
+			<ImageView
+				android:id="@+id/photon_trans_query"
+				android:layout_width="wrap_content"
+				android:layout_height="48dp"
+				android:layout_alignParentRight="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginRight="50dp"
+				android:src="@mipmap/photon_list_icon"
+				android:scaleType="center"/>
+
+			<ImageView
+				android:id="@+id/photon_create"
+				android:layout_width="wrap_content"
+				android:layout_height="48dp"
+				android:paddingRight="15dp"
+				android:paddingLeft="15dp"
+				android:layout_alignParentRight="true"
+				android:layout_alignParentTop="true"
+				android:scaleType="center"
+				android:src="@mipmap/photon_create_icon"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1">
+
+			<RelativeLayout
+				android:id="@+id/empty_like_rela"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:visibility="gone">
+
+				<ImageView
+					android:id="@+id/empty_like_icon"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="20dp"
+					android:clickable="false"
+					android:visibility="gone"/>
+
+				<TextView
+					android:id="@+id/empty_text"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:textColor="@color/color_7fe2edea"
+					android:layout_marginLeft="20dp"
+					android:layout_marginRight="20dp"
+					android:layout_centerHorizontal="true"
+					android:layout_alignParentBottom="true"
+					android:layout_marginBottom="120dp"
+					android:textSize="@dimen/dimens_16_sp" />
+			</RelativeLayout>
+
+			<org.yczbj.ycrefreshviewlib.view.YCRefreshView
+				android:id="@+id/recyclerView"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:scrollbars="none"/>
+		</RelativeLayout>
+
+
+		<TextView
+			android:id="@+id/photon_pay"
+			style="@style/WalletStyle"
+			android:layout_marginBottom="25dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+			android:layout_marginTop="25dp"
+			android:textColor="@color/color_ff1b272b"
+			android:background="@drawable/selector_solid_45ffbf"
+			android:text="@string/photon_pay_1"/>
+	</LinearLayout>
+</FrameLayout>

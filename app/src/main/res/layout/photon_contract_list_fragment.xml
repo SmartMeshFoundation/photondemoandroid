@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<org.yczbj.ycrefreshviewlib.view.YCRefreshView
+		android:id="@+id/recyclerView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_empty="@layout/include_empty_transfer_view"
+		app:layout_error="@layout/include_empty_transfer_view"
+		android:scrollbars="none"/>
+
+</LinearLayout>

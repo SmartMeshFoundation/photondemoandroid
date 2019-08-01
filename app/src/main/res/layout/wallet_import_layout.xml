@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/app_title_layout"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/wallet_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        app:tabIndicatorFullWidth="false"
+        app:tabSelectedTextColor="@color/color_e2edea"
+        app:tabTextColor="@color/color_7fe2edea"
+        app:tabIndicatorColor="@color/color_45ffbf"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+        app:tabGravity="fill"
+        app:tabMode="scrollable" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_2fbaffec"/>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

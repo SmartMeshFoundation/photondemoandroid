@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.smartmesh.photon">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Camera selection -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- No net social new add permissions -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- The receiver and speakers switch mode-->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- Samsung application market needs the permissions-->
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+
+    <!-- targetSdkVersion大于25必须声明REQUEST_INSTALL_PACKAGES权限，安装应用-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".PhotonApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning,HardcodedDebugMode"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".ui.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeOpaque"/>
+
+        <activity android:name=".ui.AlertActivity" android:screenOrientation="portrait"/>
+
+        <!-- create wallet activity -->
+        <activity android:name=".wallet.WalletCreateActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".wallet.WalletQrCodeActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".wallet.WalletImportActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".wallet.NewWalletActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".wallet.WalletPrivateKeyActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".wallet.WalletKeyStoreActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".wallet.WalletCopyActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".custom.CustomCaptureActivity" android:screenOrientation="portrait"/>
+
+
+        <!-- photon channel list UI -->
+        <activity android:name=".channel.PhotonChannelList"
+            android:screenOrientation="portrait"/>
+
+        <!-- photon create channel UI -->
+        <activity android:name=".channel.PhotonCreateChannel"
+            android:screenOrientation="portrait"/>
+
+        <!-- photon transfer UI -->
+        <activity android:name=".channel.PhotonTransferUI"
+            android:screenOrientation="portrait"/>
+
+        <!-- photon transfer query list UI -->
+        <activity android:name=".channel.PhotonTransferQueryUI"
+            android:screenOrientation="portrait"/>
+
+        <!-- photon channel add UI -->
+        <activity android:name=".channel.PhotonChannelDepositUI"
+            android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:paddingLeft="15dp"
+	android:paddingRight="15dp">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="12dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/wallet_token_number"
+			android:textSize="@dimen/dimens_12_sp"
+			android:textColor="@color/color_7fbaffec"
+			android:gravity="center_vertical"/>
+
+		<TextView
+			android:id="@+id/amount"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical"
+			android:layout_marginTop="32dp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginLeft="10dp"
+			android:textColor="@color/color_7fbaffec"
+			android:text="@string/photon_state"
+			android:textSize="@dimen/dimens_12_sp"
+			android:layout_marginBottom="5dp"/>
+
+		<TextView
+			android:id="@+id/state"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="32dp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_marginLeft="10dp"
+			android:textColor="@color/color_7fbaffec"
+			android:text="@string/photon_transfer_time"
+			android:textSize="@dimen/dimens_12_sp"
+			android:layout_marginBottom="5dp"/>
+
+		<TextView
+			android:id="@+id/time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="32dp"/>
+	</RelativeLayout>
+
+	<TextView
+		android:id="@+id/channel_note"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:gravity="center_vertical"
+		android:singleLine="true"
+		android:layout_marginTop="12dp"
+		android:textColor="@color/color_7fbaffec"/>
+
+	<TextView
+		android:id="@+id/partner"
+		style="@style/third_title"
+		android:ellipsize="middle"
+		android:layout_marginTop="10dp"
+		android:textColor="@color/color_7fbaffec"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+        android:layout_marginTop="12dp"
+		android:background="@color/color_2fbaffec"/>
+</LinearLayout>
