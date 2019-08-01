@@ -366,6 +366,7 @@ public class PhotonCreateChannel extends BaseActivity<PhotonCreateContract.Prese
         intent.putExtra("showContract",true);
         intent.putExtra("fromType",fromType);
         startActivity(intent);
+        finish();
     }
 
 
