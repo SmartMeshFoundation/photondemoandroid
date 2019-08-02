@@ -19,24 +19,24 @@ public class PhotonTransferEntity implements Comparable<PhotonTransferEntity>{
      * data :
      */
 
-    //交易hash
+    //交易hash  Trading hash
     private String lockSecretHash;
 
-    //目标地址
+    //目标地址 target address
     private String targetAddress;
-    //发起人地址
+    //发起人地址   Sponsor address
     private String fromAddress;
-    //转账金额
+    //转账金额     transfer amount
     private String amount;
-    //转账区块
+    //转账区块     Transfer block
     private long blockNumber;
-    //转账时间
+    //转账时间     Transfer time
     private long time;
-    //转账费用
+    //转账费用     Transfer fee
     private String fee;
-    //token 合约地址
+    //token 合约地址   Token contract address
     private String tokenAddress;
-    //转账信息
+    //转账信息    Transfer information
     private String data;
     /**
      *   0 - Transfer init
@@ -47,7 +47,7 @@ public class PhotonTransferEntity implements Comparable<PhotonTransferEntity>{
      *   5 - transfer already failed
      * */
     private int status;
-    //发出还是接受  0 发送 1 接收记录
+    //发出还是接受  0 发送 1 接收记录     Issue or accept 0 send 1 receive record
     private int type;
 
     public String getLockSecretHash() {
