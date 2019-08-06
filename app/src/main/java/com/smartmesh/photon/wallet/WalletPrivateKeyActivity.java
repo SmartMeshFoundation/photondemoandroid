@@ -22,7 +22,7 @@ public class WalletPrivateKeyActivity extends BaseActivity {
 
     @BindView(R.id.walletPrivateKey)
     TextView walletPrivateKey;
-    @BindView(R.id.walletCopyPrivateKey)
+    @BindView(R.id.wallet_copy_private_key)
     TextView walletCopyPrivateKey;
 
     private String privateKey;
@@ -38,10 +38,10 @@ public class WalletPrivateKeyActivity extends BaseActivity {
         walletPrivateKey.setText(privateKey);
     }
 
-    @OnClick(R.id.walletCopyPrivateKey)
+    @OnClick(R.id.wallet_copy_private_key)
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.walletCopyPrivateKey:
+            case R.id.wallet_copy_private_key:
                 Utils.copyText(WalletPrivateKeyActivity.this,privateKey);
                 walletCopyPrivateKey.setText(getString(R.string.wallet_show_private_key_3));
                 break;

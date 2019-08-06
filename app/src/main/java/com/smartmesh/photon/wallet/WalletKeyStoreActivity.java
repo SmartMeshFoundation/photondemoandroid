@@ -38,10 +38,10 @@ public class WalletKeyStoreActivity extends BaseActivity {
         walletKeyStore.setText(keystore);
     }
 
-    @OnClick(R.id.wallet_show_keystore)
+    @OnClick(R.id.wallet_copy_keystore)
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.wallet_show_keystore:
+            case R.id.wallet_copy_keystore:
                 Utils.copyText(WalletKeyStoreActivity.this,keystore);
                 break;
             default:

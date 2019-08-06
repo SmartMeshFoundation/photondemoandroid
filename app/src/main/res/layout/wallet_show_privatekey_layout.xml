@@ -31,7 +31,7 @@
         />
 
     <TextView
-        android:id="@+id/walletCopyPrivateKey"
+        android:id="@+id/wallet_copy_private_key"
         style="@style/WalletStyle"
         android:text="@string/wallet_copy_private_key_2"
         android:textColor="@color/color_ff1b272b"
